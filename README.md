@@ -4,6 +4,7 @@ Simple shell script to fix macOS privacy issues and remove mostly useless macOS 
 Script as well disable Spotlight suggestions in system and as well in Safari, by default each keystorke is being sent out to apple, even when you search for your local files, pretty cool huh ? So let's better move to usage now
 
 ## Usage
+MacOS High sierra reuqire to have sip diasbled.
 <pre>
 bash homecall.sh fixmacos
 </pre>
