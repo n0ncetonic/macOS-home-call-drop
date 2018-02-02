@@ -80,7 +80,7 @@ help_msg(){
   echo "version 1.0"
   echo ""
   echo "Available commands"
-  echo "fixmacos - fix your macOS to stop/limit invade your privacy"
+  echo "fixmacos - fix your macOS to stop/limit invasions of your privacy"
   echo "restore - restore to default settings"
   echo "help - help message"
 }
@@ -120,7 +120,7 @@ start(){
     echo "Agent ${agent} disabled"
   done
   echo ""
-  echo "Specified agents has been disabled"
+  echo "Specified agents have been disabled"
   echo ""
   for daemon in "${DAEMONS[@]}"
   do
@@ -129,9 +129,9 @@ start(){
     echo "Daemon ${daemon} disabled"
   done
   echo ""
-  echo "Specified daemons has been disabled"
+  echo "Specified daemons have been disabled"
   echo ""
-  echo "Spotlight and safari suggestions has been fixed and your keystorokes are no longer sent out to apple!"
+  echo "Spotlight and safari suggestions have been fixed, and your keystrokes are no longer sent out to apple!"
   echo ""
   echo "!!!RESTART YOUR COMPUTER NOW TO APPLY CHANGES!!!"
   echo ""
@@ -146,7 +146,7 @@ restore(){
     echo "Agent ${agent} enabled"
   done
   echo ""
-  echo "Specified agents has been enabled"
+  echo "Specified agents have been enabled"
   echo ""
   for daemon in "${DAEMONS[@]}"
   do
@@ -155,7 +155,7 @@ restore(){
     echo "Daemon ${daemon} enabled"
   done
   echo ""
-  echo "Specified daemons has been enabled"
+  echo "Specified daemons have been enabled"
   echo ""
   echo "RESTART YOUR COMPUTER NOW TO APPLY CHANGES"
   echo ""
