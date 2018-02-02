@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DAEMONS=()
-DAEMONS+=('com.apple.netbiosd') #Netbiosd is microsoft's networking service. used to share files between mac and windows
+#DAEMONS+=('com.apple.netbiosd') #Netbiosd is microsoft's networking service. used to share files between mac and windows
 #DAEMONS+=('com.apple.preferences.timezone.admintool') #Time setting daemon
 #DAEMONS+=('com.apple.preferences.timezone.auto') #Time setting daemon
 #DAEMONS+=('com.apple.remotepairtool') #Pairing devices remotely
@@ -16,7 +16,7 @@ DAEMONS+=('com.apple.SubmitDiagInfo') #Feedback - most likely it submits your co
 DAEMONS+=('com.apple.screensharing') #Screensharing daemon
 DAEMONS+=('com.apple.appleseed.fbahelperd') #Related to feedback
 #DAEMONS+=('com.apple.apsd') #Apple Push Notification Service (apsd) - it's calling home quite often + used by Facetime and Messages
-DAEMONS+=('com.apple.AOSNotificationOSX') #Notifications
+#DAEMONS+=('com.apple.AOSNotificationOSX') #Notifications
 #DAEMONS+=('com.apple.FileSyncAgent.sshd') #Mostlikely sshd on this machine
 #DAEMONS+=('com.apple.ManagedClient.cloudconfigurationd') #Related to manage current macOS user iCloud
 #DAEMONS+=('com.apple.ManagedClient.enroll') #Related to manage current macOS user
@@ -47,7 +47,7 @@ AGENTS=()
 #AGENTS+=('com.apple.icloud.fmfd') #Find my device ?
 #AGENTS+=('com.apple.imagent') #Facetime & Messages
 AGENTS+=('com.apple.cloudfamilyrestrictionsd-mac') #iCloud Family restrictions
-AGENTS+=('com.apple.cloudpaird') #Related to iCloud
+#AGENTS+=('com.apple.cloudpaird') #Related to iCloud
 AGENTS+=('com.apple.cloudphotosd') #Propably syncing your photos to icloud
 AGENTS+=('com.apple.DictationIM') #Dictation
 AGENTS+=('com.apple.assistant_service') #Siri
