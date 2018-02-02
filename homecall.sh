@@ -74,6 +74,18 @@ AGENTS+=('com.apple.safaridavclient') #Sending bookmarks to iCloud, even if you 
 AGENTS+=('com.apple.SafariNotificationAgent') #Notifications in Safari
 
 
+check(){
+  if csrutil status | grep -q 'enabled'; then
+    echo "SIP is enabled. It may not fully work."
+    if sw_vers -productVersion | grep -q '10.13'; then #high sierra
+      echo "High Sierra (10.13.X) requires to have SIP DISABLED"
+      echo "Boot into recovery mode and type csrutil disable. It's nice to enable it afterwards."
+      exit 1
+    fi
+  fi
+}
+
+
 help_msg(){
   echo ""
   echo "macOS home call dropper by karek314"
@@ -100,7 +112,6 @@ fix_spotlight(){
   #echo $TMP
   defaults delete com.apple.Spotlight.plist orderedItems
   defaults write com.apple.Spotlight.plist orderedItems "<array>$TMP</array>"
-
   # Safari Preferences
   defaults write com.apple.Safari.plist UniversalSearchEnabled -bool NO
   defaults write com.apple.Safari.plist SuppressSearchSuggestions -bool YES
@@ -164,12 +175,14 @@ restore(){
 
 case $1 in
 "fixmacos")
+  check
   start
   ;;
 "help")
   help_msg
   ;;
 "restore")
+  check
   restore
   ;;
 *)
